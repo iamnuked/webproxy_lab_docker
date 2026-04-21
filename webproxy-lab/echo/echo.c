@@ -21,6 +21,7 @@ int main(int argc, char const *argv[]) {
 
     /* 서버에 TCP 연결을 시도하고, 성공하면 연결된 소켓 fd를 받음 */
     clientfd = Open_clientfd(host, port);
+    
     /* 연결된 소켓을 Robust I/O 버퍼와 연결 */
     Rio_readinitb(&rio, clientfd);
 
